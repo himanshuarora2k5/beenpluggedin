@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | beenpluggedin</title>
+    <meta name="description" content="The mission behind beenpluggedin.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal" style="font-size: clamp(3rem, 8vw, 8rem);">Engineering<br><span style="color:var(--text-muted);">Sound.</span></h1>
+            
+            <div class="grid grid-2 reveal reveal-delay-1" style="margin-top: 4rem; gap: 6rem; align-items: center;">
+                <div>
+                    <h3 style="color:var(--accent-glow);">Our Mission</h3>
+                    <p style="font-size: 1.25rem; line-height: 1.8;">We believe that broadcast-quality audio shouldn't be locked behind a degree in acoustic engineering. <strong>beenpluggedin</strong> was founded to democratize the science of sound.</p>
+                    <p>Whether you're treating a bedroom for your first podcast, configuring OBS for a stream, or looking for the perfect focus environment in our Productivity Lounge, we provide the computational tools and curated knowledge to get you there.</p>
+                </div>
+                <div class="glass-card" style="padding: 2rem; display:flex; align-items:center; justify-content:center; min-height: 400px; background: rgba(0,0,0,0.4);">
+                    <img src="images/studio_setup_real_1779351961740.png" alt="Premium Studio Setup" style="width:100%; border-radius: 12px; filter: grayscale(20%) contrast(120%);" onerror="this.style.display='none'">
+                    <!-- Fallback if image not found -->
+                    <i data-lucide="mic-2" style="width: 100px; height: 100px; color: var(--text-muted); position:absolute; z-index:-1;"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

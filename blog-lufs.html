@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering to -14 LUFS | beenpluggedin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html" class="active">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container" style="max-width: 900px;">
+            <a href="blog.html" style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:2rem; font-family:'Space Grotesk',sans-serif; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);"><i data-lucide="arrow-left" style="width:16px;"></i> Back to Archive</a>
+            
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 2rem;">Mastering to -14 LUFS: The Streaming Standard</h1>
+            
+            <div class="reveal reveal-delay-1" style="display:flex; align-items:center; gap:1rem; margin-bottom: 4rem; color:var(--accent-glow); font-family:'Space Grotesk',sans-serif;">
+                <span>By Core Engineering</span>
+                <span>•</span>
+                <span>Post-Production</span>
+            </div>
+
+            <article class="reveal reveal-delay-2 blog-content-wrapper">
+                
+                <p>If you've ever uploaded a podcast or a track to Spotify and noticed it sounds significantly quieter (or more distorted) than professional tracks, you've likely fallen victim to streaming normalization algorithms.</p>
+                
+                <h2>What are LUFS?</h2>
+                <p>LUFS stands for Loudness Units relative to Full Scale. Unlike peak meters (which only measure the absolute loudest instantaneous point of a waveform), LUFS measures the <em>perceived</em> loudness of a track over time. It models how human ears actually hear volume.</p>
+                
+                <h2>The -14 Target</h2>
+                <p>Most streaming platforms (Spotify, YouTube, Apple Podcasts) have settled on -14 LUFS as their normalization target. If your track is louder than -14 LUFS (say, -8 LUFS), the platform will turn your track down to match -14. This means all the dynamic range you destroyed by compressing your track heavily was wasted, and your track just sounds flat and quiet.</p>
+
+                <h2>How to Hit the Target</h2>
+                <p>Use a loudness meter plugin on your master bus. Adjust your mix so that the "Integrated LUFS" (the average loudness over the entire track) sits right around -14 LUFS, with your true peaks never exceeding -1.0 dBTP (Decibels True Peak) to prevent clipping during lossy conversion.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

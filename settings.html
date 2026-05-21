@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Blueprints | beenpluggedin</title>
+    <meta name="description" content="Visual blueprints for optimizing Windows and macOS audio settings.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html" class="active">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">Settings Blueprints</h1>
+            <p class="reveal">Optimal OS-level audio configurations for Windows and macOS. Don't let your operating system ruin your $500 microphone.</p>
+            
+            <div class="grid grid-2 reveal reveal-delay-1" style="margin-top: 4rem; gap:4rem;">
+                
+                <!-- Windows OS -->
+                <div class="glass-card" style="padding: 3rem;">
+                    <h2 style="display:flex; align-items:center; gap:1rem;"><i data-lucide="monitor" style="width:36px; height:36px; color:var(--accent-glow);"></i> Windows 11</h2>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">1. The Sample Rate Mismatch</h4>
+                        <p style="font-size: 0.95rem;">Windows defaults many interfaces to 48kHz, but games or Discord might request 44.1kHz. This causes robotic glitching.</p>
+                        <ul style="font-size:0.95rem; color:var(--text-muted); margin-left:1.5rem; margin-bottom:2rem;">
+                            <li>Open `mmsys.cpl` (Sound Control Panel).</li>
+                            <li>Right-click your device -> Properties -> Advanced.</li>
+                            <li>Set exactly to: <strong>24 bit, 48000 Hz (Studio Quality)</strong>.</li>
+                        </ul>
+
+                        <h4 style="margin-bottom: 1rem;">2. Disable "Audio Enhancements"</h4>
+                        <p style="font-size: 0.95rem;">Windows tries to "enhance" audio by compressing dynamic range. This destroys music fidelity.</p>
+                        <ul style="font-size:0.95rem; color:var(--text-muted); margin-left:1.5rem;">
+                            <li>In the Advanced tab, UNCHECK "Enable audio enhancements".</li>
+                            <li>Disable Windows Sonic for Headphones unless specifically playing spatial games.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- macOS -->
+                <div class="glass-card" style="padding: 3rem;">
+                    <h2 style="display:flex; align-items:center; gap:1rem;"><i data-lucide="laptop" style="width:36px; height:36px; color:var(--accent-glow);"></i> macOS</h2>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">1. Audio MIDI Setup</h4>
+                        <p style="font-size: 0.95rem;">macOS handles audio beautifully, but you still need to manually verify sample rates using the built-in utility.</p>
+                        <ul style="font-size:0.95rem; color:var(--text-muted); margin-left:1.5rem; margin-bottom:2rem;">
+                            <li>Open Spotlight -> search "Audio MIDI Setup".</li>
+                            <li>Select your Audio Interface.</li>
+                            <li>Set Format to: <strong>48,000 Hz, 24-bit Integer</strong>.</li>
+                        </ul>
+
+                        <h4 style="margin-bottom: 1rem;">2. Voice Isolation Mode</h4>
+                        <p style="font-size: 0.95rem;">macOS Sonoma introduces hardware-level mic processing.</p>
+                        <ul style="font-size:0.95rem; color:var(--text-muted); margin-left:1.5rem;">
+                            <li>During a call, click the orange mic icon in the menu bar.</li>
+                            <li>Select "Standard" if you are using a treated room.</li>
+                            <li>Select "Voice Isolation" ONLY if you are in a noisy cafe; otherwise it degrades audio quality.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beenpluggedin | Ultimate Audio Hub</title>
+    <meta name="description" content="The definitive audiophile's guide for normal people. Diagnostics, acoustics, and smart gear matching.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-video-wrapper">
+            <video autoPlay loop muted playsInline>
+                <source src="https://res.cloudinary.com/dfonotyfb/video/upload/v1775585556/dds3_1_rqhg7x.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <span class="hero-tag">Acoustic Intelligence</span>
+                <h1>Pure Sound.<br><span style="color: var(--accent-glow);">No Compromise.</span></h1>
+                <p>The definitive audiophile's guide for normal people. Diagnostics, room acoustics, and smart gear matching for the modern digital era.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem;">
+                    <a href="mic-calibration.html" class="btn">Run Diagnostics <i data-lucide="arrow-right"></i></a>
+                    <a href="gear.html" class="btn btn-outline">Find Your Gear</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section">
+            <div class="grid grid-3">
+                <a href="mic-calibration.html" class="glass-card reveal reveal-delay-1">
+                    <div class="icon-wrapper">
+                        <i data-lucide="stethoscope"></i>
+                    </div>
+                    <h3>Audio Doctor</h3>
+                    <p>Interactive troubleshooting wizard. Fix latency, echo, and noise floor issues in minutes.</p>
+                </a>
+                <a href="room-acoustics.html" class="glass-card reveal reveal-delay-2">
+                    <div class="icon-wrapper">
+                        <i data-lucide="box"></i>
+                    </div>
+                    <h3>Acoustics Lab</h3>
+                    <p>Calculate your room's RT60 reverb time and instantly generate a custom acoustic treatment blueprint.</p>
+                </a>
+                <a href="productivity-lounge.html" class="glass-card reveal reveal-delay-3">
+                    <div class="icon-wrapper">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3>The Lounge</h3>
+                    <p>Chat with Cadence, our AI DJ, and mix active ambient noise for your ultimate focus session.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="container section reveal">
+            <h2>The Audiophile's Lexicon</h2>
+            <p style="max-width: 800px;">Understanding the core terminology of sound engineering is the first step toward mastery.</p>
+            
+            <div class="grid grid-2" style="margin-top: 4rem;">
+                <div class="glass-card reveal">
+                    <h3>Sample Rate & Bit Depth</h3>
+                    <p>Sample rate (measured in kHz) determines the frequency response of your digital audio, while bit depth (usually 16 or 24-bit) controls the dynamic range. For professional podcasting, a standard of 48kHz and 24-bit depth provides plenty of headroom without artifacts.</p>
+                </div>
+                <div class="glass-card reveal reveal-delay-1">
+                    <h3>Plosives & Sibilance</h3>
+                    <p>Plosives are harsh bursts of air caused by hard consonant sounds hitting the capsule. Sibilance is the high-frequency harshness from 'S' or 'Sh' sounds. Using a quality pop filter and engaging a de-esser are crucial steps in mitigating these issues.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <h3>Phantom Power (48V)</h3>
+                    <p>Condenser microphones require active electronics to operate their internal impedance converters. Phantom power, typically 48 volts supplied via XLR cable from your audio interface, powers these components.</p>
+                </div>
+                <div class="glass-card reveal reveal-delay-1">
+                    <h3>Proximity Effect</h3>
+                    <p>A phenomenon inherent in directional microphones where low-frequency (bass) response increases as the sound source moves closer. Broadcasters use this to achieve a deep "radio voice," requiring careful distance management.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-massive-text">
+            beenpluggedin
+        </div>
+        <div class="footer-grid container">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <i data-lucide="radio"></i> beenpluggedin
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Elevating digital audio through precision software and acoustic science.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Interactive Tools</h4>
+                <ul>
+                    <li><a href="mic-calibration.html">Audio Doctor</a></li>
+                    <li><a href="room-acoustics.html">RT60 Lab</a></li>
+                    <li><a href="gear.html">Gear Finder</a></li>
+                    <li><a href="settings.html">Settings Blueprints</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="productivity-lounge.html">The Lounge</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; color: var(--text-muted); margin-top: 4rem; font-size: 0.9rem;">
+            &copy; 2026 beenpluggedin Inc. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

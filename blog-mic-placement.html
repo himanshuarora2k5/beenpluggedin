@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Axis Rejection and Mic Placement | beenpluggedin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html" class="active">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container" style="max-width: 900px;">
+            <a href="blog.html" style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:2rem; font-family:'Space Grotesk',sans-serif; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);"><i data-lucide="arrow-left" style="width:16px;"></i> Back to Archive</a>
+            
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 2rem;">Off-Axis Rejection and Mic Placement</h1>
+            
+            <div class="reveal reveal-delay-1" style="display:flex; align-items:center; gap:1rem; margin-bottom: 4rem; color:var(--accent-glow); font-family:'Space Grotesk',sans-serif;">
+                <span>By Core Engineering</span>
+                <span>•</span>
+                <span>Tracking</span>
+            </div>
+
+            <article class="reveal reveal-delay-2 blog-content-wrapper">
+                
+                <p>The most common complaint from new streamers is: "My microphone is picking up my mechanical keyboard." The solution isn't software noise suppression; it's physics and geometry.</p>
+                
+                <h2>The Null Point</h2>
+                <p>Almost all broadcast microphones use a "Cardioid" polar pattern. This means they are most sensitive at the front (0 degrees) and least sensitive at the back (180 degrees). That 180-degree spot is called the <em>null point</em>.</p>
+                
+                <p>To eliminate keyboard noise, you must position the microphone so that the keyboard is exactly at the null point. This means the microphone should be angled so the <strong>back</strong> of the microphone is pointing directly at your spacebar.</p>
+
+                <h2>Distance and the Inverse Square Law</h2>
+                <p>Sound pressure drops by half (6dB) every time the distance doubles. If your microphone is 3 feet away from your mouth, you have to turn the gain up extremely high. This high gain also captures the keyboard that is 1 foot away.</p>
+                <p>Bring the microphone 2 to 4 inches from your mouth. You can now turn the gain down significantly. Because your mouth is now exponentially closer to the mic than the keyboard is, your voice will overpower the keyboard noise mechanically, without the need for destructive software noise gates.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

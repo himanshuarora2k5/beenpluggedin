@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Lounge | beenpluggedin</title>
+    <meta name="description" content="Immersive focus lounge featuring Cadence AI DJ and custom ambient sound synthesis.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html" class="active">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px;">
+        <section class="container">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 2rem;" class="reveal">
+                <div>
+                    <h1>The Lounge</h1>
+                    <p style="margin:0;">Chat with Cadence (AI DJ) and synthesize your perfect focus state.</p>
+                </div>
+                
+                <div class="glass-card" style="padding: 1rem 2rem; border-radius: 100px; display:flex; flex-direction:row; align-items:center; gap: 1rem;">
+                    <i data-lucide="timer" style="color:var(--accent-glow);"></i>
+                    <div style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:800;">
+                        <span id="pomo-mins">25</span>:<span id="pomo-secs">00</span>
+                    </div>
+                    <button id="pomo-start-btn" class="btn" style="padding: 0.5rem 1rem; border-radius:100px; font-size:0.7rem; margin:0;">Start</button>
+                </div>
+            </div>
+
+            <div class="grid grid-2 reveal reveal-delay-1" style="gap: 4rem;">
+                
+                <!-- Chat Window -->
+                <div class="chat-window">
+                    <div style="padding: 1.5rem 2rem; border-bottom: 1px solid var(--card-border); background: var(--nav-bg); display:flex; align-items:center; gap:1rem;">
+                        <div style="width:40px; height:40px; border-radius:50%; background:var(--accent-glow); display:flex; align-items:center; justify-content:center; color:var(--bg-deep);">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin:0;">Cadence</h4>
+                            <small style="color:var(--accent-glow);">AI DJ & Audio Concierge</small>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message-bubble message-ai">
+                            Welcome to the Lounge. I'm Cadence. What's the vibe for this session? (Try "lofi for coding", "synthwave focus", or "heavy metal gym")
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Tell Cadence what you want to hear..." autocomplete="off">
+                        <button id="chat-send-btn"><i data-lucide="send"></i></button>
+                    </div>
+                </div>
+
+                <!-- Deck & Synth Mixer -->
+                <div>
+                    <!-- Player Deck -->
+                    <div id="player-deck-container" class="glass-card" style="padding: 1.5rem; border-radius: 16px; margin-bottom: 2rem; min-height: 250px; display:flex; align-items:center; justify-content:center;">
+                        <div style="text-align:center; opacity:0.5;">
+                            <i data-lucide="disc" style="width:48px; height:48px; margin-bottom:1rem;"></i>
+                            <p>Awaiting Cadence's track selection...</p>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Noise Mixer -->
+                    <div class="glass-card" style="padding: 2rem; border-radius: 16px;">
+                        <h4 style="margin-bottom: 1.5rem; display:flex; align-items:center; gap:0.5rem;">
+                            <i data-lucide="sliders"></i> Sonic Blanket Mixer
+                        </h4>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                                <label style="font-family:'Space Grotesk',sans-serif; color:var(--text-primary); display:flex; align-items:center; gap:0.5rem;"><i data-lucide="waves" style="width:16px;"></i> Deep Brown Noise (Web Audio API)</label>
+                            </div>
+                            <input type="range" id="mixer-brown" class="studio-slider" min="0" max="100" value="0">
+                        </div>
+                        
+                        <p style="font-size:0.85rem; margin:0; opacity:0.7;">
+                            <em>Note: Adjusting the slider will initialize the in-browser synthesizer. No internet bandwidth required.</em>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Physics of Acoustic Panels | beenpluggedin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html" class="active">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container" style="max-width: 900px;">
+            <a href="blog.html" style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:2rem; font-family:'Space Grotesk',sans-serif; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);"><i data-lucide="arrow-left" style="width:16px;"></i> Back to Archive</a>
+            
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 2rem;">The Physics of Fiberglass Acoustic Panels</h1>
+            
+            <div class="reveal reveal-delay-1" style="display:flex; align-items:center; gap:1rem; margin-bottom: 4rem; color:var(--accent-glow); font-family:'Space Grotesk',sans-serif;">
+                <span>By Core Engineering</span>
+                <span>•</span>
+                <span>Room Acoustics</span>
+            </div>
+
+            <article class="reveal reveal-delay-2 blog-content-wrapper">
+                <img src="images/blog_header_1_1779351979551.png" style="width:100%; border-radius:16px; margin-bottom:4rem;" alt="Acoustic Panels in Studio" onerror="this.style.display='none'">
+                
+                <p>When most people decide to "treat" their room, they buy cheap egg-crate foam from Amazon and stick it to the walls. Unfortunately, they soon realize their audio still sounds muddy. Why? Because of acoustic impedance.</p>
+                
+                <h2>Kinetic Energy Conversion</h2>
+                <p>Sound is physical energy. To stop sound waves from bouncing off a hard wall, a material must absorb that kinetic energy and convert it into trace amounts of heat. Cheap acoustic foam is simply not dense enough to force low and mid-frequency sound waves to work hard enough to convert their energy.</p>
+                
+                <p>High-density rigid fiberglass (like Owens Corning 703 or Rockwool Safe'n'Sound) has a massive density advantage. When sound waves hit the tangled fibers of these materials, they expend significant energy navigating the microscopic maze. This successfully absorbs frequencies down to 200Hz, removing the "boxiness" from vocal recordings.</p>
+
+                <h2>Air Gaps are Magic</h2>
+                <p>If you mount a 2-inch fiberglass panel completely flush against the wall, it works well. But if you mount it with a 2-inch <em>air gap</em> between the panel and the wall, its effectiveness effectively doubles.</p>
+                <p>Sound waves have maximum velocity at 1/4 of their wavelength. At the exact boundary of the wall, velocity is zero. By moving the panel away from the wall, you place the absorptive material directly in the zone of maximum particle velocity, drastically increasing low-end absorption.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

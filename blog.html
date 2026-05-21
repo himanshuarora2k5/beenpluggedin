@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base | beenpluggedin</title>
+    <meta name="description" content="Editorial guides and technical knowledge for audio engineers.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html" class="active">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal" style="font-size: clamp(3rem, 10vw, 10rem); line-height:0.9;">Journal<br><span style="color:var(--text-muted);">& Archive.</span></h1>
+            
+            <div class="blog-search-container reveal reveal-delay-1" style="margin-top: 4rem; max-width: 600px; position:relative;">
+                <i data-lucide="search" style="position:absolute; left:1.5rem; top:50%; transform:translateY(-50%); color:var(--text-muted);"></i>
+                <input type="text" id="blog-search" placeholder="Search the archive..." style="width:100%; padding:1.25rem 1.5rem 1.25rem 4rem; border-radius:100px; border:1px solid var(--card-border); background:var(--input-bg); color:var(--text-primary); font-family:'Inter',sans-serif; font-size:1rem;">
+            </div>
+
+            <div class="linked-list-container reveal reveal-delay-2" style="margin-top: 6rem; display: flex; flex-direction: column; gap: 2rem;">
+                
+                <a href="blog-xlr-vs-usb.html" class="linked-list-node">
+                    <article class="glass-card" style="padding: 2.5rem; display:flex; flex-direction:column; gap:1rem;">
+                        <span style="font-family:'Space Grotesk',sans-serif; color:var(--accent-glow); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase;">Gear Engineering</span>
+                        <h3 style="font-size: 2rem; margin:0;">XLR vs USB Microphones: The Architectural Difference</h3>
+                        <p style="margin:0; max-width:100%;">Understand the ADC (Analog-to-Digital Converter) pipeline and why USB microphones inherently suffer from higher noise floors than discrete XLR preamps.</p>
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-top:auto; color:var(--text-primary); font-family:'Space Grotesk',sans-serif; font-weight:700;">
+                            Read Protocol <i data-lucide="arrow-right"></i>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="blog-acoustic-panels.html" class="linked-list-node">
+                    <article class="glass-card" style="padding: 2.5rem; display:flex; flex-direction:column; gap:1rem;">
+                        <span style="font-family:'Space Grotesk',sans-serif; color:var(--accent-glow); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase;">Room Acoustics</span>
+                        <h3 style="font-size: 2rem; margin:0;">The Physics of Fiberglass Acoustic Panels</h3>
+                        <p style="margin:0; max-width:100%;">Why cheap foam doesn't work. We break down acoustic impedance and kinetic energy conversion to show why rigid fiberglass is the industry standard.</p>
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-top:auto; color:var(--text-primary); font-family:'Space Grotesk',sans-serif; font-weight:700;">
+                            Read Protocol <i data-lucide="arrow-right"></i>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="blog-lufs.html" class="linked-list-node">
+                    <article class="glass-card" style="padding: 2.5rem; display:flex; flex-direction:column; gap:1rem;">
+                        <span style="font-family:'Space Grotesk',sans-serif; color:var(--accent-glow); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase;">Post-Production</span>
+                        <h3 style="font-size: 2rem; margin:0;">Mastering to -14 LUFS: The Streaming Standard</h3>
+                        <p style="margin:0; max-width:100%;">Demystifying Loudness Units relative to Full Scale. Learn how to use limiting and compression to meet Spotify and Apple Podcast requirements without squashing dynamics.</p>
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-top:auto; color:var(--text-primary); font-family:'Space Grotesk',sans-serif; font-weight:700;">
+                            Read Protocol <i data-lucide="arrow-right"></i>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="blog-mic-placement.html" class="linked-list-node">
+                    <article class="glass-card" style="padding: 2.5rem; display:flex; flex-direction:column; gap:1rem;">
+                        <span style="font-family:'Space Grotesk',sans-serif; color:var(--accent-glow); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase;">Tracking</span>
+                        <h3 style="font-size: 2rem; margin:0;">Off-Axis Rejection and Mic Placement</h3>
+                        <p style="margin:0; max-width:100%;">The geometrical secret to eliminating keyboard clicks. Learn how to utilize the null point of cardioid and supercardioid polar patterns.</p>
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-top:auto; color:var(--text-primary); font-family:'Space Grotesk',sans-serif; font-weight:700;">
+                            Read Protocol <i data-lucide="arrow-right"></i>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

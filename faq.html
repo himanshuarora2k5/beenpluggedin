@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | beenpluggedin</title>
+    <meta name="description" content="Frequently asked questions about audio gear and beenpluggedin tools.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">Knowledge<br><span style="color:var(--text-muted);">Queries.</span></h1>
+            
+            <div class="grid grid-2 reveal reveal-delay-1" style="margin-top: 4rem; gap: 4rem;">
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="color:var(--accent-glow); margin-bottom:1rem;">Is Cadence (AI DJ) totally free?</h3>
+                    <p>Yes. The Productivity Lounge and the Cadence Chatbot are entirely free to use. Cadence searches our curated archive of YouTube/YouTube Music playlists to match your focus state.</p>
+                </div>
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="color:var(--accent-glow); margin-bottom:1rem;">How accurate is the RT60 Calculator?</h3>
+                    <p>It uses Sabine's Formula, which provides an excellent approximation for rectangular rooms. While perfect accuracy requires impulse response testing with a measurement mic, our calculator will get you 90% of the way there for treatment planning.</p>
+                </div>
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="color:var(--accent-glow); margin-bottom:1rem;">Do I really need a hardware Audio Interface?</h3>
+                    <p>If you are using an XLR microphone, yes. If you are using a USB microphone, the interface (ADC and preamp) is built directly into the microphone itself.</p>
+                </div>
+                <div class="glass-card" style="padding: 2.5rem;">
+                    <h3 style="color:var(--accent-glow); margin-bottom:1rem;">Can I use the Web Audio Synth on mobile?</h3>
+                    <p>Yes, the Web Audio API is supported on all modern mobile browsers. You can generate Brown Noise or Rain directly on your phone while studying.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

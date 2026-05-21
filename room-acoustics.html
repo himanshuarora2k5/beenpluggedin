@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT60 Acoustics Lab | beenpluggedin</title>
+    <meta name="description" content="Calculate your room's RT60 reverb time and instantly generate a custom acoustic treatment blueprint.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html" class="active">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">RT60 Acoustics Lab</h1>
+            <p class="reveal">Calculate reverberation time using Sabine's formula and get a custom room treatment blueprint.</p>
+            
+            <div class="tool-dashboard" style="margin-top: 5rem;">
+                <div class="glass-card reveal reveal-delay-1">
+                    <h3>Room Dimensions</h3>
+                    <p style="margin-bottom: 2rem;">Adjust the sliders to match your room.</p>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                            <label style="font-family:'Space Grotesk',sans-serif; color:var(--text-primary);">Length</label>
+                            <span id="val-length" style="color:var(--accent-glow); font-weight:bold;">12 ft</span>
+                        </div>
+                        <input type="range" id="room-length" class="studio-slider" min="6" max="40" value="12">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                            <label style="font-family:'Space Grotesk',sans-serif; color:var(--text-primary);">Width</label>
+                            <span id="val-width" style="color:var(--accent-glow); font-weight:bold;">10 ft</span>
+                        </div>
+                        <input type="range" id="room-width" class="studio-slider" min="6" max="40" value="10">
+                    </div>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                            <label style="font-family:'Space Grotesk',sans-serif; color:var(--text-primary);">Ceiling Height</label>
+                            <span id="val-height" style="color:var(--accent-glow); font-weight:bold;">8 ft</span>
+                        </div>
+                        <input type="range" id="room-height" class="studio-slider" min="7" max="20" value="8">
+                    </div>
+
+                    <label style="display:block; margin-bottom: 0.5rem; font-family:'Space Grotesk',sans-serif;">Primary Wall Material</label>
+                    <select id="wall-material" class="studio-select">
+                        <option value="drywall">Standard Drywall</option>
+                        <option value="concrete">Bare Concrete</option>
+                        <option value="hardwood">Hardwood / Paneling</option>
+                        <option value="glass">Large Glass Windows</option>
+                    </select>
+                </div>
+
+                <div class="visualizer-pane reveal reveal-delay-2" style="justify-content: flex-start; align-items: stretch;">
+                    <h3 style="margin-bottom: 2rem; text-align:center;">Acoustic Profile</h3>
+                    
+                    <div style="text-align:center; margin-bottom: 2rem;">
+                        <div style="font-size: 0.9rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Estimated RT60</div>
+                        <div id="rt60-value" style="font-size: 5rem; font-family:'Space Grotesk',sans-serif; font-weight:800; color:var(--text-primary); line-height:1;">0.80s</div>
+                        <div id="rt60-status" style="margin-top: 0.5rem; font-weight: 500; font-size:1.1rem; color:var(--accent-glow);">Good - Standard Podcast Room</div>
+                    </div>
+
+                    <div style="background: var(--input-bg); border-radius: 10px; height: 12px; width: 100%; margin-bottom: 2rem; overflow: hidden; border: 1px solid var(--card-border);">
+                        <div id="rt60-meter-fill" style="height: 100%; width: 50%; background: var(--accent-glow); transition: all 0.4s ease;"></div>
+                    </div>
+
+                    <div style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--card-border);">
+                        <h4 style="margin-bottom: 0.5rem; color:var(--accent-glow); font-family:'Space Grotesk',sans-serif;"><i data-lucide="check-circle" style="width:16px; display:inline; vertical-align:text-bottom;"></i> Treatment Blueprint</h4>
+                        <p id="rt60-blueprint" style="font-size: 0.95rem; margin:0;">Loading custom blueprint...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

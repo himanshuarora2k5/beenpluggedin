@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Gear Finder | beenpluggedin</title>
+    <meta name="description" content="Find the perfect audio gear setup based on your budget, persona, and room environment.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html" class="active">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">Smart Gear Finder</h1>
+            <p class="reveal" style="max-width: 600px;">Stop guessing. Select your profile below and our engine will construct the perfect audio bundle for your exact needs.</p>
+            
+            <div class="glass-card reveal reveal-delay-1" style="margin-top: 4rem; max-width: 800px; margin-left:auto; margin-right:auto;">
+                <div class="grid grid-2" style="margin-bottom: 2rem;">
+                    <div>
+                        <label style="display:block; margin-bottom: 0.5rem; color: var(--accent-glow); font-family: 'Space Grotesk', sans-serif;">I am a...</label>
+                        <select id="gear-persona" class="studio-select">
+                            <option value="streamer">Podcaster / Streamer</option>
+                            <option value="student">Student / WFH Professional</option>
+                            <option value="pro">Pro Audio Engineer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom: 0.5rem; color: var(--accent-glow); font-family: 'Space Grotesk', sans-serif;">My Budget is...</label>
+                        <select id="gear-budget" class="studio-select">
+                            <option value="budget">Under $100 (Budget)</option>
+                            <option value="mid">$100 - $300 (Enthusiast)</option>
+                            <option value="high">$300+ (High-End)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button id="find-gear-btn" class="btn" style="width: 100%;">Build My Bundle <i data-lucide="zap"></i></button>
+            </div>
+
+            <div id="gear-results" class="reveal" style="display:none; max-width: 1000px; margin: 4rem auto 0 auto;">
+                <!-- Gear results injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

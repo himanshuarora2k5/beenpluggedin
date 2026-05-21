@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Doctor | beenpluggedin</title>
+    <meta name="description" content="Interactive audio troubleshooting. Fix latency, echo, and static noise issues.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html" class="active">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">Audio Doctor</h1>
+            <p class="reveal">Interactive diagnostic wizard. Identify and resolve audio issues instantly.</p>
+            
+            <div class="tool-dashboard" style="margin-top: 5rem;">
+                <div class="glass-card reveal reveal-delay-1">
+                    <h3>Diagnostic Input</h3>
+                    <p>Select your symptom and hardware to generate a custom resolution path.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <label style="display:block; margin-bottom: 0.5rem; color: var(--accent-glow); font-family: 'Space Grotesk', sans-serif;">1. What is the primary issue?</label>
+                        <select id="trouble-symptom" class="studio-select" style="margin-bottom: 2rem;">
+                            <option value="static">Buzzing, Humming, or Static Noise</option>
+                            <option value="muffled">My Voice Sounds Muffled or "Underwater"</option>
+                            <option value="echo">Too Much Room Echo (Reverb)</option>
+                        </select>
+
+                        <label style="display:block; margin-bottom: 0.5rem; color: var(--accent-glow); font-family: 'Space Grotesk', sans-serif;">2. What is your hardware setup?</label>
+                        <select id="trouble-setup" class="studio-select" style="margin-bottom: 2rem;">
+                            <option value="usb">USB Microphone (e.g., Blue Yeti, AT2020USB)</option>
+                            <option value="xlr">XLR Mic + Audio Interface</option>
+                        </select>
+
+                        <button id="run-doctor-btn" class="btn" style="width: 100%;">Run Diagnostics <i data-lucide="activity"></i></button>
+                    </div>
+                </div>
+
+                <div class="visualizer-pane reveal reveal-delay-2" style="justify-content: flex-start; align-items: stretch;">
+                    <h3 style="margin-bottom: 1rem;"><i data-lucide="clipboard-list" style="display:inline; vertical-align: middle; margin-right: 10px;"></i> Diagnostic Output</h3>
+                    <div id="doctor-results" style="display: none; margin-top: 1rem;">
+                        <!-- Results injected by JS -->
+                    </div>
+                    <div id="doctor-placeholder" style="flex:1; display:flex; align-items:center; justify-content:center; opacity:0.3; text-align:center;">
+                        <p>Awaiting input...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('run-doctor-btn').addEventListener('click', () => {
+            document.getElementById('doctor-placeholder').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

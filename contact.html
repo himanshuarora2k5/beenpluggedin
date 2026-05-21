@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | beenpluggedin</title>
+    <meta name="description" content="Get in touch with beenpluggedin.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i data-lucide="radio"></i> beenpluggedin
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Hub</a>
+            <a href="mic-calibration.html">Doctor</a>
+            <a href="room-acoustics.html">Acoustics</a>
+            <a href="gear.html">Gear</a>
+            <a href="settings.html">Settings</a>
+            <a href="productivity-lounge.html">Lounge</a>
+            <a href="blog.html">Blog</a>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun-moon"></i></button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h1 class="reveal">Establish<br><span style="color:var(--text-muted);">Connection.</span></h1>
+            
+            <div class="grid grid-2 reveal reveal-delay-1" style="margin-top: 4rem; gap: 6rem;">
+                <div>
+                    <h3 style="color:var(--accent-glow);">Studio Inquiries</h3>
+                    <p>Have a question about the Audio Doctor, or need specific consultation on acoustic panel placement? Drop a signal into our inbox.</p>
+                    <ul style="list-style:none; margin-top: 2rem;">
+                        <li style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; font-family:'Space Grotesk',sans-serif;"><i data-lucide="mail"></i> signals@beenpluggedin.com</li>
+                        <li style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; font-family:'Space Grotesk',sans-serif;"><i data-lucide="map-pin"></i> Sound Stage 4, Los Angeles</li>
+                    </ul>
+                </div>
+                <div class="glass-card" style="padding: 3rem;">
+                    <form style="display: flex; flex-direction: column; height: 100%;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display:block; margin-bottom: 0.5rem; font-family:'Space Grotesk',sans-serif;">Frequency (Subject)</label>
+                            <input type="text" style="width:100%; padding:1rem; border-radius:8px; background:var(--input-bg); border:1px solid var(--card-border); color:var(--text-primary);" placeholder="Technical Support">
+                        </div>
+                        <div style="margin-bottom: 2rem;">
+                            <label style="display:block; margin-bottom: 0.5rem; font-family:'Space Grotesk',sans-serif;">Transmission</label>
+                            <textarea style="width:100%; padding:1rem; border-radius:8px; background:var(--input-bg); border:1px solid var(--card-border); color:var(--text-primary); min-height: 150px;" placeholder="Describe your acoustic environment..."></textarea>
+                        </div>
+                        <button class="btn" type="button" style="width:100%; margin-top: auto;">Transmit <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 10rem;">
+        <div class="footer-massive-text">beenpluggedin</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
